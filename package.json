@@ -1,0 +1,31 @@
+{
+  "name": "lycwed-cordova-plugin-admob-applovin",
+  "version": "1.0.0",
+  "description": "Cordova AdMob Mediation Plugin for AppLovin",
+  "scripts": {
+    "version": "sync-package-version --cordova-plugin"
+  },
+  "cordova": {
+    "id": "lycwed-cordova-plugin-admob-applovin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": "lycwed/lycwed-cordova-plugin-admob-applovin",
+  "author": "Lycwed",
+  "license": "MIT",
+  "keywords": [
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "plugin",
+    "admob",
+    "applovin",
+    "mediation"
+  ],
+  "bugs": {
+    "url": "https://github.com/lycwed/lycwed-cordova-plugin-admob-applovin/issues"
+  },
+  "homepage": "https://github.com/lycwed/lycwed-cordova-plugin-admob-applovin"
+}

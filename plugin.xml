@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="lycwed-cordova-plugin-admob-applovin" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>lycwed-cordova-plugin-admob-applovin</name>
+    <description>Cordova AdMob Mediation Plugin for AppLovin</description>
+
+    <engines>
+        <engine name="cordova" version=">=3" />
+    </engines>
+
+    <platform name="android">
+        <framework src="com.applovin:applovin-sdk:7.7.0" />
+        <framework src="com.google.ads.mediation:applovin:7.7.0.0" />
+
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <activity android:name="com.applovin.adview.AppLovinInterstitialActivity"
+                android:configChanges="orientation|screenSize"/>
+
+            <activity android:name="com.applovin.adview.AppLovinConfirmationActivity"
+                android:configChanges="orientation|screenSize"/>
+        </config-file>
+
+        <!-- Prevents compilation error: https://developer.android.com/studio/build/multidex.html -->
+        <!-- when add additional mediation plugins -->
+        <dependency id="cordova-plugin-multidex" />
+    </platform>
+
+    <platform name="ios">
+        <pods-config ios-min-version="9.0" use-frameworks="true" />
+        <pod id="GoogleMobileAdsMediationAppLovin" version="4.6.0.0" custom="true" />
+
+        <!-- Prevents compilation failures when using pod's id with additional mediations plugins -->
+        <dependency id="cordova-plugin-cocoapod-support" />
+    </platform>
+</plugin>
