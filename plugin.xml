@@ -11,8 +11,8 @@
     </engines>
 
     <platform name="android">
-        <framework src="com.applovin:applovin-sdk:7.7.0" />
-        <framework src="com.google.ads.mediation:applovin:7.7.0.0" />
+        <framework src="com.applovin:applovin-sdk:9.4.2" />
+        <framework src="com.google.ads.mediation:applovin:9.4.2.0" />
 
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <activity android:name="com.applovin.adview.AppLovinInterstitialActivity"
